@@ -21,8 +21,13 @@ header {
 
 li {
     display: inline;
-    padding: 2px;
+    padding: 20px;
 }
+#nav_bar .nav-item {display:inline-block;}
+
+li a{
+    display: block;
+    }
 
 a {
     text-decoration: none;

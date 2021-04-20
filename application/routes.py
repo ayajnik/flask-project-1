@@ -32,10 +32,10 @@ def enrollment():
 
 @app.route('/api/')
 @app.route('/api/<idx>')
-def api(idx):
-    if idx == None:
+def api(idx=None):
+    if (idx == None):
         jdata = courseData
     else:
-        jdata = courseData[idx]
+        jdata = courseData[int(idx)]
     
-    return Response(json.dumps(jdata[idx]), mimetype='/application/json')
+    return Response(json.dumps(jdata), mimetype='/application/json')
